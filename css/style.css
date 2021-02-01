@@ -6,10 +6,11 @@
     box-sizing: border-box;
 }
 :root{
-    --turquesa: #00a790;
-    --oscuroTurque: #188b7c;
-    --menosOscuroTurque: #2c9486;
-    --claroTurque: #5ac0b2;
+    --oscuroTurque: #0F293B;
+    --menosOscuroTurque: #0F293B;
+    --turquesa: #152F4C;
+    --claroTurque: #1B4865;
+    --masClaro: #2F4E69;
 }
 body{
     font-family: 'Yusei Magic', sans-serif;
@@ -47,7 +48,7 @@ header{
     margin: 5px;
 }
 .nav-items:hover {
-    background-color: var(--claroTurque);
+    background-color: var(--masClaro);
     /* padding: 5px; */
     border-radius: 10px;
 }
@@ -64,19 +65,19 @@ main{
 .main-meme{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: 30em;
-    width: 30em;
-    border: 1px solid whitesmoke;
+    height: 35rem;
+    width: 35rem;
+    background-color: #111111;
 }
-.big-aside{
-    width: 20%;
-    height: 100%;
-    background-color: var(--menosOscuroTurque);
-    color: whitesmoke;
-    padding: 15px;
-}
-.imagen-fondo{
+.top-title, .bottom-title{
+    width: 100%;
+    min-height: 90px;
+    max-height: 120px;
+    padding: 2%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: salmon;
 }

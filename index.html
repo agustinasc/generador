@@ -6,6 +6,7 @@
 
     <!--     LINKS CSS  -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/aside.css">
 
     <!--     LINKS EXTERNOS  -->    
     <script src="https://kit.fontawesome.com/856516f981.js" crossorigin="anonymous"></script>
@@ -35,9 +36,9 @@
         
         <main>
             <section class="main-meme">
-                <section class="top-title">TOP TEXT</section>
-                <section><img src="" alt=""></section>
-                <section class="'bottom-title">BUTTOM TEXT</section>
+                <article class="top-title">TOP TEXT</article>
+                <article id="meme-img"><img src="" alt=""></article>
+                <article class="bottom-title">BUTTOM TEXT</article>
             </section>
 
             <button class="main-button"><i></i>Descargar meme</button>
@@ -47,20 +48,26 @@
 
     <!--------------------- ASIDE - IMAGEN ---------------->
 
-        <aside class="aside-imagen">
+    <aside class="aside-imagen">
+        
+            <button class="aside-imagen-close"><i class="fas fa-times"></i>
+            </button> 
+            <!-- el boton de close es responsivo! -->
+
             <section class="aside-imagen-main">
-                <!-- <button class="aside-imagen-close"><i class="fas fa-times"></i>
-                </button> --> <!-- el boton de close es responsivo! -->
 
                 <h2 class="aside-imagen-title">IMAGEN</h2>
 
                 <h3>URL</h3>
-                <input type="url" id="url-imagen">
+                <input type="url" id="url-imagen" class="url-imagen">
 
-                <section class="imagen-fondo">
-                    <h3>FONDO</h3>
-                    
-                    <input type="color" name="fondo de la imagen" id="fondo-imagen" value="#FFFFFF">
+                <h3>FONDO</h3>
+                
+                <section class="imagen-fondo">    
+                    <section class=""> 
+                        <input type="color" name="fondo de la imagen" id="fondo-input-colores" value="#FFFFFF">
+                        <span id="span-texto"></span>
+                    </section>
 
                     <select name="" id="fondo-select">
                         <option value="">Ninguno</option>
@@ -100,71 +107,81 @@
 
         <!-------------------------- ASIDE - TEXTO -------------------->
 
-        <!-- <aside class="text-aside-main">
-            <h2>TEXTO</h2>
+        <aside class="text-aside-main">
+            <form>          
+                <h2>TEXTO</h2>
+                <div>
+                    <h3>SUPERIOR</h3>
+                    <input type="text" name="top-text" id="top-text" value="TOP TEXT">
+                </div>
+                <div>
+                    <input type="checkbox" name="top-text-check" id="top-text-check">
+                    <label for="top-text-check">Sin texto superior</label>
+                </div>
+                <div>
+                    <h3>INFERIOR</h3>
+                    <input type="text" name="bottom-text" id="bottom-text" value="BUTTOM TEXT">
+                </div>
+                <div>
+                    <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
+                    <label for="bottom-text-check">Sin texto inferior</label>
+                </div>
+                <div>
+                    <h3>FUENTE</h3>
+                    <select name="text-font" id="text-font">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="American Typewriter">American Typewriter</option>
+                        <option value="Andale Mono">Andale Mono</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+                </div>
 
-            <h3>SUPERIOR</h3>
-            <input type="text" name="top-text" id="top-text" value="TOP TEXT">
+                <input type="number" name="font-size-text" value="40">
+                <button id="">
+                    <i class="fas fa-align-left"></i>
+                </button>
+                <button id="">
+                    <i class="fas fa-align-center"></i>
+                </button>
+                <button id="">
+                    <i class="fas fa-align-right"></i>
+                </button>
+                
+                <div>
+                    <h3>COLOR</h3>
+                    <input type="color" name="color-text" id="color-text" value="#000000">
+                    <span></span>
+                </div>
+                <div>
+                    <h3>FONDO</h3>
+                    <input type="color" name="background-text" id="background-text" value="#FFFFFF">
+                    <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
+                    <label for="background-transparent">Fondo transparente</label>
+                </div>
 
-            <input type="checkbox" name="top-text-check" id="top-text-check">
-            <label for="top-text-check">Sin texto superior</label>
+                <h3>CONTORNO</h3>
+                <button>Ninguno</button>
+                <button>Claro</button>
+                <button>Oscuro</button>
 
-            <h3>INFERIOR</h3>
-            <input type="text" name="bottom-text" id="bottom-text" value="BUTTOM TEXT">
+                <h3>ESPACIADO</h3>
+                <input type="number" name="Espaciado del texto" id="space-text">
 
-            <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
-            <label for="bottom-text-check">Sin texto inferior</label>
-
-            <h3>FUENTE</h3>
-            <select name="text-font" id="text-font">
-                <option value="Arial">Arial</option>
-                <option value="Arial Black">Arial Black</option>
-                <option value="American Typewriter">American Typewriter</option>
-                <option value="Andale Mono">Andale Mono</option>
-                <option value="Comic Sans MS">Comic Sans MS</option>
-                <option value="Helvetica">Helvetica</option>
-                <option value="Impact">Impact</option>
-                <option value="Verdana">Verdana</option>
-                <option value="Times New Roman">Times New Roman</option>
-            </select>
-
-            <input type="number" name="font-size-text" value="40">
-            <button id="">
-                <i class="fas fa-align-left"></i>
-            </button>
-            <button id="">
-                <i class="fas fa-align-center"></i>
-            </button>
-            <button id="">
-                <i class="fas fa-align-right"></i>
-            </button>
-
-            <h3>COLOR</h3>
-            <input type="color" name="color-text" id="color-text" value="#000000">
-            
-            <h3>FONDO</h3>
-            <input type="color" name="background-text" id="background-text" value="#FFFFFF">
-            <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
-            <label for="background-transparent">Fondo transparente</label>
-
-            <h3>CONTORNO</h3>
-            <button>Ninguno</button>
-            <button>Claro</button>
-            <button>Oscuro</button>
-
-            <h3>ESPACIADO</h3>
-            <input type="number" name="Espaciado del texto" id="space-text">
-
-            <h3>INTERLINEADO</h3>
-            <select name="Interlineado del texto" id="interline-text">
-                <option value="0.8">0.8</option>
-                <option value="1">1</option>
-                <option value="1.2">1.2</option>
-                <option value="1.5">1.5</option>
-                <option value="2.5">2.5</option>
-            </select>
-
-        </aside> -->
+                <h3>INTERLINEADO</h3>
+                <select name="Interlineado del texto" id="interline-text">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2.5">2.5</option>
+                </select>
+        </form>
+        </aside>
     
     </section>
 
