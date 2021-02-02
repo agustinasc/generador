@@ -7,6 +7,7 @@
     <!--     LINKS CSS  -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/aside.css">
+    <link rel="stylesheet" href="./css/aside-text.css">
 
     <!--     LINKS EXTERNOS  -->    
     <script src="https://kit.fontawesome.com/856516f981.js" crossorigin="anonymous"></script>
@@ -41,93 +42,108 @@
                 <article class="bottom-title">BUTTOM TEXT</article>
             </section>
 
-            <button class="main-button"><i></i>Descargar meme</button>
+            <button class="btn-download">
+                <i class="fas fa-download"></i>Descargar meme
+            </button>
         </main>
     </section>
     <section class="big-aside">
 
     <!--------------------- ASIDE - IMAGEN ---------------->
 
-    <aside class="aside-imagen">
+    <!-- <aside class="aside-imagen">
         
             <button class="aside-imagen-close"><i class="fas fa-times"></i>
-            </button> 
+            </button>  -->
             <!-- el boton de close es responsivo! -->
 
-            <section class="aside-imagen-main">
+            <!-- <section class="aside-imagen-main">
 
-                <h2 class="aside-imagen-title">IMAGEN</h2>
+                <h2 class="aside-first-title">IMAGEN</h2>
 
-                <h3>URL</h3>
+                <h3 class="aside-second-title">URL</h3>
                 <input type="url" id="url-imagen" class="url-imagen">
 
-                <h3>FONDO</h3>
+                <h3 class="aside-second-title">FONDO</h3>
                 
                 <section class="imagen-fondo">    
-                    <section class=""> 
+                    <section class="input-color"> 
                         <input type="color" name="fondo de la imagen" id="fondo-input-colores" value="#FFFFFF">
-                        <span id="span-texto"></span>
+                        <span id="span-texto">#FFFFFF</span>
                     </section>
 
-                    <select name="" id="fondo-select">
-                        <option value="">Ninguno</option>
-                        <option value="">Aclarar</option>
-                        <option value="">Oscurecer</option>
-                        <option value="">Diferencia</option>
-                        <option value="">Luminosidad</option>
-                        <option value="">Multiplicar</option>
+                    <select name="Select de fondos" id="fondo-select">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="aclarar">Aclarar</option>
+                        <option value="oscurecer">Oscurecer</option>
+                        <option value="diferencia">Diferencia</option>
+                        <option value="luminosidad">Luminosidad</option>
+                        <option value="multiplicar">Multiplicar</option>
                     </select>
                 </section>
-                <section> 
-                    <h3>FILTROS</h3>
+
+                <section class="imagen-filter">
+
+                    <h3 class="aside-second-title">FILTROS</h3>
+
                     <label for="filter-brightness">BRILLO</label>
                     <input type="range" name="filter-brightness" id="filter-brightness" min="0" max="1" value="1" step="0.1">
+
                     <label for="filter-opacity">OPACIDAD</label>
-                    <input type="range" name="filter-opacity" id="filter-opacity" min="0" max="1" value="1" step="0.1">
+                    <input type="range" name="filter-opacity" id="filter-opacity"  min="0" max="1" value="1" step="0.1">
+
                     <label for="filter-contrast">CONTRASTE</label>
-                    <input type="range" name="filter-contrast" id="filter-contrast" min="100%" max="1000%" value="100%" step="1%">
+                    <input type="range" name="filter-contrast" id="filter-contrast"  min="100%" max="1000%" value="100%" step="1%">
+
                     <label for="filter-blur">DESENFOQUE</label>
-                    <input type="range" name="filter-blur" id="filter-blur" min="0px" max="10px" value="0px" step="0.1px">
+                    <input type="range" name="filter-blur" id="filter-blur"  min="0px" max="10px" value="0px" step="0.1px">
+
                     <label for="filter-grayscale">ESCALA DE GRISES</label>
-                    <input type="range" name="filter-grayscale" id="filter-grayscale" min="0%" max="100%" value="0%" step="1%">
+                    <input type="range" name="filter-grayscale" id="filter-grayscale"  min="0%" max="100%" value="0%" step="1%">
+
                     <label for="filter-sepia">SEPIA</label>
                     <input type="range" name="filter-sepia" id="filter-sepia" min="0%" max="100%" value="0%" step="1%">
+
                     <label for="filter-hue-rotation">HUE</label>
-                    <input type="range" name="filter-hue-rotation" id="filter-hue-rotation" min="0deg" max="359deg" value="1deg" step="0deg">
+                    <input type="range" name="filter-hue-rotation" id="filter-hue-rotation"  min="0deg" max="359deg" value="1deg" step="0deg">
+
                     <label for="filter-saturation">SATURADO</label>
-                    <input type="range" name="filter-saturation" id="filter-saturation" min="100%" max="1000%" value="100%" step="10%">
+                    <input type="range" name="filter-saturation" id="filter-saturation"  min="100%" max="1000%" value="100%" step="10%">
+
                     <label for="filter-invert">NEGATIVO</label>
-                    <input type="range" name="filter-invert" id="filter-invert" min="0" max="1" value="1" step="0.1">
+                    <input type="range" name="filter-invert" id="filter-invert"  min="0" max="1" value="1" step="0.1">
                 </section>
 
-                <button class="imagen-button">Reestablecer filtros</button>
+                <button id="btn-imagen-reset">Reestablecer filtros</button>
 
             </section>
-        </aside>
+        </aside> -->
 
         <!-------------------------- ASIDE - TEXTO -------------------->
 
         <aside class="text-aside-main">
             <form>          
-                <h2>TEXTO</h2>
-                <div>
-                    <h3>SUPERIOR</h3>
+                <h2 class="aside-first-title">TEXTO</h2>
+                <section>
+                    <h3 class="aside-second-title">SUPERIOR</h3>
                     <input type="text" name="top-text" id="top-text" value="TOP TEXT">
-                </div>
-                <div>
+                </section>
+                <section>
                     <input type="checkbox" name="top-text-check" id="top-text-check">
                     <label for="top-text-check">Sin texto superior</label>
-                </div>
-                <div>
-                    <h3>INFERIOR</h3>
+                </section>
+                <section>
+                    <h3 aside-second-title>INFERIOR</h3>
                     <input type="text" name="bottom-text" id="bottom-text" value="BUTTOM TEXT">
-                </div>
-                <div>
+                </section>
+                <section>
                     <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
                     <label for="bottom-text-check">Sin texto inferior</label>
-                </div>
-                <div>
-                    <h3>FUENTE</h3>
+                </section>
+
+                <section>
+                    <h3 class="aside-second-title">FUENTE</h3>
+
                     <select name="text-font" id="text-font">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
@@ -139,40 +155,44 @@
                         <option value="Verdana">Verdana</option>
                         <option value="Times New Roman">Times New Roman</option>
                     </select>
-                </div>
 
-                <input type="number" name="font-size-text" value="40">
-                <button id="">
-                    <i class="fas fa-align-left"></i>
-                </button>
-                <button id="">
-                    <i class="fas fa-align-center"></i>
-                </button>
-                <button id="">
-                    <i class="fas fa-align-right"></i>
-                </button>
-                
-                <div>
-                    <h3>COLOR</h3>
+                </section>
+                <section class="font-align">
+                    <input type="number" id="text-font-size" name="font-size-text" value="40">
+                    
+                    <section class="btn-align">
+                        <button id="">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                        <button id="">
+                            <i class="fas fa-align-center"></i>
+                        </button>
+                        <button id="">
+                            <i class="fas fa-align-right"></i>
+                        </button>
+                    </section>
+                </section>
+                <section>
+                    <h3 class="aside-second-title">COLOR</h3>
                     <input type="color" name="color-text" id="color-text" value="#000000">
                     <span></span>
-                </div>
-                <div>
-                    <h3>FONDO</h3>
+                </section>
+                <section>
+                    <h3 class="aside-second-title">FONDO</h3>
                     <input type="color" name="background-text" id="background-text" value="#FFFFFF">
                     <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
                     <label for="background-transparent">Fondo transparente</label>
-                </div>
+                </section>
 
-                <h3>CONTORNO</h3>
+                <h3 class="aside-second-title">CONTORNO</h3>
                 <button>Ninguno</button>
                 <button>Claro</button>
                 <button>Oscuro</button>
 
-                <h3>ESPACIADO</h3>
+                <h3 class="aside-second-title">ESPACIADO</h3>
                 <input type="number" name="Espaciado del texto" id="space-text">
 
-                <h3>INTERLINEADO</h3>
+                <h3 class="aside-second-title">INTERLINEADO</h3>
                 <select name="Interlineado del texto" id="interline-text">
                     <option value="0.8">0.8</option>
                     <option value="1">1</option>

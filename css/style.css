@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Monda&display=swap');
 
 *{
     margin: 0;
@@ -11,11 +12,17 @@
     --turquesa: #152F4C;
     --claroTurque: #1B4865;
     --masClaro: #2F4E69;
+    --celeste: #7293A6;
+    --colorText: #f5f5f5;
+    --violeta: #a13ecf;
+    --violetaClaro: rgb(171, 104, 202);
+    --font1: 'Yusei Magic', sans-serif;
+    --font2: 'Monda', sans-serif;;
 }
 body{
-    font-family: 'Yusei Magic', sans-serif;
+    font-family: var(--font1);
     width: 100vw;
-    /* height: 100vh; */
+    height: 100vh; 
     display: flex;
 }
 .first-section{
@@ -28,7 +35,7 @@ header{
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* height: 10%; */
+    height: 20%;
 }
 .header-title{
     font-size: 3rem;
@@ -54,8 +61,8 @@ header{
 }
 main{
     background-color: var(--turquesa);
-    color: whitesmoke;
-   /*  height: 100%; */
+    color: var(--colorText);
+    height: 80%; 
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -79,5 +86,19 @@ main{
     display: flex;
     justify-content: center;
     align-items: center; 
-    background-color: salmon;
+    background-color: white;
+    color: #111;
+}
+.btn-download{
+    font-family: var(--font2);
+    color: var(--colorText);
+    margin: 2%;
+    padding: 1%;
+    background-color: #1DB954;
+    border-radius: 5px;
+    border: none;
+}
+.btn-download:hover{
+    background-color: #1b5e20;
+    transition: 0.3s;
 }
