@@ -54,10 +54,10 @@
     <!-- <aside class="aside-imagen">
         
             <button class="aside-imagen-close"><i class="fas fa-times"></i>
-            </button>  -->
+            </button> -->
             <!-- el boton de close es responsivo! -->
 
-            <!-- <section class="aside-imagen-main">
+           <!--  <section class="aside-imagen-main">
 
                 <h2 class="aside-first-title">IMAGEN</h2>
 
@@ -117,8 +117,8 @@
                 <button id="btn-imagen-reset">Reestablecer filtros</button>
 
             </section>
-        </aside> -->
-
+        </aside>
+ -->
         <!-------------------------- ASIDE - TEXTO -------------------->
 
         <aside class="text-aside-main">
@@ -126,7 +126,7 @@
                 <h2 class="aside-first-title">TEXTO</h2>
                 <section>
                     <h3 class="aside-second-title">SUPERIOR</h3>
-                    <input type="text" name="top-text" id="top-text" value="TOP TEXT">
+                    <textarea name="Texto superior" id="top-text" cols="30" rows="10">TOP TEXT</textarea>
                 </section>
                 <section>
                     <input type="checkbox" name="top-text-check" id="top-text-check">
@@ -134,7 +134,7 @@
                 </section>
                 <section>
                     <h3 aside-second-title>INFERIOR</h3>
-                    <input type="text" name="bottom-text" id="bottom-text" value="BUTTOM TEXT">
+                    <textarea name="bottom-text" id="bottom-text" cols="30" rows="10">BUTTOM TEXT</textarea>
                 </section>
                 <section>
                     <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
@@ -160,30 +160,38 @@
                 <section class="font-align">
                     <input type="number" id="text-font-size" name="font-size-text" value="40">
                     
-                    <section class="btn-align">
-                        <button id="">
+                    <section class="btn-container">
+                        <button id="btn">
                             <i class="fas fa-align-left"></i>
                         </button>
-                        <button id="">
+                        <button id="btn">
                             <i class="fas fa-align-center"></i>
                         </button>
-                        <button id="">
+                        <button id="btn">
                             <i class="fas fa-align-right"></i>
                         </button>
                     </section>
                 </section>
-                <section>
-                    <h3 class="aside-second-title">COLOR</h3>
-                    <input type="color" name="color-text" id="color-text" value="#000000">
-                    <span></span>
-                </section>
-                <section>
-                    <h3 class="aside-second-title">FONDO</h3>
-                    <input type="color" name="background-text" id="background-text" value="#FFFFFF">
-                    <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
-                    <label for="background-transparent">Fondo transparente</label>
-                </section>
 
+                <section class="container-color-text">
+                    <article>
+                        <h3 class="aside-second-title">COLOR</h3>
+                        <section class="imagen-fondo">
+                            <input type="color" name="Color del texto" id="fondo-input-colores" value="#FFFFFF">
+                            <span id="span-texto">#FFFFFF</span>
+                        </section>
+                    </article>
+
+                    <section class="imagen-fondo">
+                        <h3 class="aside-second-title">FONDO</h3>
+                       <article>
+                            <input type="color" name="background-text" id="background-text" value="#FFFFFF">
+                            <span id="span-texto">#FFFFFF</span>
+                            <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
+                            <label for="background-transparent">Fondo transparente</label>
+                        </article>
+                    </section>
+                </section>
                 <h3 class="aside-second-title">CONTORNO</h3>
                 <button>Ninguno</button>
                 <button>Claro</button>
