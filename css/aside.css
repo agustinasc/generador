@@ -24,11 +24,13 @@
     display: flex;
     justify-content: center;
 }
+
+
 /* ESTILOS URL,  FONDO Y BOTON REESTABLECER IMAGEN */
 
-.url-imagen, #fondo-select, #btn-imagen-reset, #top-text, #bottom-text, #text-font, #text-font-size{
+.url-imagen, #fondo-select, #btn-imagen-reset, #top-text, #bottom-text, #text-font, #text-font-size, .btn-contorno, #space-text, #interline-text{
     background-color: var(--claroTurque); 
-    font-family: var(--font) ;
+    font-family: var(--font2) ;
     color: var(--colorText);
     border-radius: 5px;
     border: none;
@@ -38,10 +40,14 @@
     margin: 4px;
     outline: none;
 }
-.url-imagen:focus, #fondo-select:hover, #btn-imagen-reset:hover, #top-text:hover, #bottom-text:hover, #text-font:hover, #text-font-size:hover, #btn:hover{
+.url-imagen:focus, #fondo-select:hover, #btn-imagen-reset:hover, #top-text:hover, #bottom-text:hover, #text-font:hover, #text-font-size:hover, #btn:hover, .btn-contorno:hover, #space-text:hover, #interline-text:hover{
     background-color: var(--violetaClaro);
     transition: 0.5s;
 }
+#top-text, #bottom-text{
+    height: 2.5rem;
+}
+
 .imagen-fondo{
     display: flex;
     align-items: center;
@@ -59,6 +65,7 @@
     background-color: var(--claroTurque);
     padding: 1%;
     border-radius: 5px;
+    margin: 2%
 }
 
 input[type="color"] {
@@ -72,9 +79,11 @@ input[type="color"] {
     color: var(--colorText);
     font-family: var(--font2);
     font-size: 13px;
+    /* width: 3.5em; */
+    width: 60px;
 }
 
-/* FILTROS  */
+    /* FILTROS  */
 
 .aside-second-title{
     margin: 4px 0px;
@@ -114,6 +123,8 @@ input[type='range']::-webkit-slider-thumb {
     background-color: var(--violeta);
     margin-top: 10px;
 }
+    /* FUENTES */
+
 .font-align{
     width: 100%;
     display: flex;
@@ -137,8 +148,56 @@ input[type='range']::-webkit-slider-thumb {
     border: none;
     border-radius: 5px;
 }
+
+    /* COLOR Y FONDO DEL TEXTO */
+
 .container-color-text{
-    background-color: yellowgreen;
     display: flex;
+    flex-direction: column;
+}
+.second-container{
+    display:flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+ .third-container{
+    margin: 3%;
+}
+
+/* CONTORNOS */
+
+.container-btn-contorno{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-contorno{
+    background-color: var(--claroTurque); 
+    font-family: var(--font2) ;
+    color: var(--colorText);
+    border-radius: 5px;
+    border: none;
+    width: 32%;
+    height: 30px;
+    margin: 2%;
+    outline: none;
+}
+
+
+/* ESTILOS DEL BOTON CLOSE */
+
+.container-btn-close{
+    display: flex;
+    justify-content: flex-end;
+}
+#aside-imagen-close{
+    display: none;
+}
+.aside-imagen-close{
+
+    width: 23px;
+    background-color: aqua;
+    font-size: 20px;
+}
+.aside-imagen-close:hover{
+    background-color: var(--masClaro);
 }

@@ -7,26 +7,28 @@
     <!--     LINKS CSS  -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/aside.css">
-    <link rel="stylesheet" href="./css/aside-text.css">
+    <link rel="stylesheet" href="./css/funcionalidad.css">
 
     <!--     LINKS EXTERNOS  -->    
+
     <script src="https://kit.fontawesome.com/856516f981.js" crossorigin="anonymous"></script>
 
     <!--     FAVICON  --> 
+
     <link rel="shortcut icon" href="./css/img/undraw_Account_re_o7id.svg" type="image/x-icon">
 
     <title>Proyecto - Generador de Memes </title>
 </head>
 <body>
-    <section class="first-section">
+    <section class="first-section" id="first-section">
 
         <header>
             <h1 class="header-title">Generador de Memes</h1>         
             <nav class="header-nav">
-                <li class="nav-items">
+                <li class="nav-items" id="nav-imagen">
                     <i class="far fa-image"></i>Imagen
                 </li>
-                <li class="nav-items">
+                <li class="nav-items" id="nav-texto">
                    <i class="fas fa-font"></i>Texto
                 </li>
                 <li class="nav-items">
@@ -47,17 +49,22 @@
             </button>
         </main>
     </section>
-    <section class="big-aside">
+    <section class="big-aside" id="big-aside">
+
 
     <!--------------------- ASIDE - IMAGEN ---------------->
 
-    <!-- <aside class="aside-imagen">
-        
-            <button class="aside-imagen-close"><i class="fas fa-times"></i>
-            </button> -->
-            <!-- el boton de close es responsivo! -->
 
-           <!--  <section class="aside-imagen-main">
+    <aside class="aside-imagen" id="aside-imagen">
+        
+        <!-- el boton de close es responsivo! -->
+        <section class="container-btn-close">
+            <input type="checkbox" name="Boton closed" id="aside-imagen-close">
+            <label for="aside-imagen-close" class="aside-imagen-close"><i class="fas fa-times"></i></label> 
+        </section>
+        <form>
+
+           <section class="aside-imagen-main">
 
                 <h2 class="aside-first-title">IMAGEN</h2>
 
@@ -117,16 +124,21 @@
                 <button id="btn-imagen-reset">Reestablecer filtros</button>
 
             </section>
-        </aside>
- -->
+        </form>
+    </aside>
         <!-------------------------- ASIDE - TEXTO -------------------->
 
-        <aside class="text-aside-main">
+        <aside class="text-aside-main" id="aside-texto">
+
+            <section class="container-btn-close" id="aside-texto-close">
+                <input type="checkbox" name="Boton closed" id="aside-imagen-close">
+                <label for="aside-imagen-close" class="aside-imagen-close"><i class="fas fa-times"></i></label> 
+            </section>
             <form>          
                 <h2 class="aside-first-title">TEXTO</h2>
-                <section>
+                <section class="container-title">
                     <h3 class="aside-second-title">SUPERIOR</h3>
-                    <textarea name="Texto superior" id="top-text" cols="30" rows="10">TOP TEXT</textarea>
+                    <textarea name="Texto superior" id="top-text" cols="30" rows="15">TOP TEXT</textarea>
                 </section>
                 <section>
                     <input type="checkbox" name="top-text-check" id="top-text-check">
@@ -134,7 +146,7 @@
                 </section>
                 <section>
                     <h3 aside-second-title>INFERIOR</h3>
-                    <textarea name="bottom-text" id="bottom-text" cols="30" rows="10">BUTTOM TEXT</textarea>
+                    <textarea name="bottom-text" id="bottom-text"  cols="30" rows="20">BUTTOM TEXT</textarea>
                 </section>
                 <section>
                     <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
@@ -174,31 +186,44 @@
                 </section>
 
                 <section class="container-color-text">
-                    <article>
-                        <h3 class="aside-second-title">COLOR</h3>
-                        <section class="imagen-fondo">
-                            <input type="color" name="Color del texto" id="fondo-input-colores" value="#FFFFFF">
-                            <span id="span-texto">#FFFFFF</span>
-                        </section>
-                    </article>
+                    
+                    <article class="second-container">
 
-                    <section class="imagen-fondo">
-                        <h3 class="aside-second-title">FONDO</h3>
-                       <article>
-                            <input type="color" name="background-text" id="background-text" value="#FFFFFF">
-                            <span id="span-texto">#FFFFFF</span>
-                            <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
-                            <label for="background-transparent">Fondo transparente</label>
-                        </article>
-                    </section>
+                        <section class="third-container">
+
+                            <h3 class="aside-second-title">COLOR</h3>
+
+                            <article class="input-color">
+                                <input type="color" name="Color del texto" id="fondo-input-colores" value="#FFFFFF">
+                                <span id="span-texto">#FFFFFF</span>
+                            </article>
+                        </section>
+
+                        <section class="third-container">
+                            <h3 class="aside-second-title">FONDO</h3>
+                            <article class="input-color">
+                                <input type="color" name="background-text" id="background-text" value="#FFFFFF">
+                                <span id="span-texto">#FFFFFF</span>
+                            </article>
+                        </section>
+
+                    </article>
+                    
+                    <article name="container check fondo transparente">
+                        <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
+                        <label for="background-transparent">Fondo transparente</label>
+                    </article>
                 </section>
+
                 <h3 class="aside-second-title">CONTORNO</h3>
-                <button>Ninguno</button>
-                <button>Claro</button>
-                <button>Oscuro</button>
+                <section class="container-btn-contorno">
+                    <button class="btn-contorno">Ninguno</button>
+                    <button class="btn-contorno">Claro</button>
+                    <button class="btn-contorno">Oscuro</button>
+                </section>
 
                 <h3 class="aside-second-title">ESPACIADO</h3>
-                <input type="number" name="Espaciado del texto" id="space-text">
+                <input type="number" name="Espaciado del texto" id="space-text" value="35">
 
                 <h3 class="aside-second-title">INTERLINEADO</h3>
                 <select name="Interlineado del texto" id="interline-text">
