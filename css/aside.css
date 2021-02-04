@@ -14,7 +14,7 @@
 /* ESTILOS ASIDE */
 
 .big-aside{
-    width: 20%;
+   /*  width: 20%; */
     height: 100%;
     background-color: var(--menosOscuroTurque);
     color: whitesmoke;
@@ -24,8 +24,6 @@
     display: flex;
     justify-content: center;
 }
-
-
 /* ESTILOS URL,  FONDO Y BOTON REESTABLECER IMAGEN */
 
 .url-imagen, #fondo-select, #btn-imagen-reset, #top-text, #bottom-text, #text-font, #text-font-size, .btn-contorno, #space-text, #interline-text{
@@ -123,6 +121,7 @@ input[type='range']::-webkit-slider-thumb {
     background-color: var(--violeta);
     margin-top: 10px;
 }
+
     /* FUENTES */
 
 .font-align{
@@ -193,11 +192,11 @@ input[type='range']::-webkit-slider-thumb {
     display: none;
 }
 .aside-imagen-close{
-
     width: 23px;
-    background-color: aqua;
     font-size: 20px;
 }
 .aside-imagen-close:hover{
     background-color: var(--masClaro);
 }
+
+/* MEDIA QUERIES */

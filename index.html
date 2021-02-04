@@ -48,8 +48,9 @@
                 <i class="fas fa-download"></i>Descargar meme
             </button>
         </main>
+
     </section>
-    <section class="big-aside" id="big-aside">
+    <section class="big-aside disapear" id="big-aside">
 
 
     <!--------------------- ASIDE - IMAGEN ---------------->
@@ -62,6 +63,7 @@
             <input type="checkbox" name="Boton closed" id="aside-imagen-close">
             <label for="aside-imagen-close" class="aside-imagen-close"><i class="fas fa-times"></i></label> 
         </section>
+
         <form>
 
            <section class="aside-imagen-main">
@@ -92,33 +94,35 @@
                 <section class="imagen-filter">
 
                     <h3 class="aside-second-title">FILTROS</h3>
+                    
+                    <article>
+                        <label for="filter-brightness">BRILLO</label>
+                        <input type="range" name="filter-brightness" id="filter-brightness" min="0" max="1" value="1" step="0.1">
 
-                    <label for="filter-brightness">BRILLO</label>
-                    <input type="range" name="filter-brightness" id="filter-brightness" min="0" max="1" value="1" step="0.1">
+                        <label for="filter-opacity">OPACIDAD</label>
+                        <input type="range" name="filter-opacity" id="filter-opacity"  min="0" max="1" value="1" step="0.1">
 
-                    <label for="filter-opacity">OPACIDAD</label>
-                    <input type="range" name="filter-opacity" id="filter-opacity"  min="0" max="1" value="1" step="0.1">
+                        <label for="filter-contrast">CONTRASTE</label>
+                        <input type="range" name="filter-contrast" id="filter-contrast"  min="100%" max="1000%" value="100%" step="1%">
 
-                    <label for="filter-contrast">CONTRASTE</label>
-                    <input type="range" name="filter-contrast" id="filter-contrast"  min="100%" max="1000%" value="100%" step="1%">
+                        <label for="filter-blur">DESENFOQUE</label>
+                        <input type="range" name="filter-blur" id="filter-blur"  min="0px" max="10px" value="0px" step="0.1px">
 
-                    <label for="filter-blur">DESENFOQUE</label>
-                    <input type="range" name="filter-blur" id="filter-blur"  min="0px" max="10px" value="0px" step="0.1px">
+                        <label for="filter-grayscale">ESCALA DE GRISES</label>
+                        <input type="range" name="filter-grayscale" id="filter-grayscale"  min="0%" max="100%" value="0%" step="1%">
 
-                    <label for="filter-grayscale">ESCALA DE GRISES</label>
-                    <input type="range" name="filter-grayscale" id="filter-grayscale"  min="0%" max="100%" value="0%" step="1%">
+                        <label for="filter-sepia">SEPIA</label>
+                        <input type="range" name="filter-sepia" id="filter-sepia" min="0%" max="100%" value="0%" step="1%">
 
-                    <label for="filter-sepia">SEPIA</label>
-                    <input type="range" name="filter-sepia" id="filter-sepia" min="0%" max="100%" value="0%" step="1%">
+                        <label for="filter-hue-rotation">HUE</label>
+                        <input type="range" name="filter-hue-rotation" id="filter-hue-rotation"  min="0deg" max="359deg" value="1deg" step="0deg">
 
-                    <label for="filter-hue-rotation">HUE</label>
-                    <input type="range" name="filter-hue-rotation" id="filter-hue-rotation"  min="0deg" max="359deg" value="1deg" step="0deg">
+                        <label for="filter-saturation">SATURADO</label>
+                        <input type="range" name="filter-saturation" id="filter-saturation"  min="100%" max="1000%" value="100%" step="10%">
 
-                    <label for="filter-saturation">SATURADO</label>
-                    <input type="range" name="filter-saturation" id="filter-saturation"  min="100%" max="1000%" value="100%" step="10%">
-
-                    <label for="filter-invert">NEGATIVO</label>
-                    <input type="range" name="filter-invert" id="filter-invert"  min="0" max="1" value="1" step="0.1">
+                        <label for="filter-invert">NEGATIVO</label>
+                        <input type="range" name="filter-invert" id="filter-invert"  min="0" max="1" value="1" step="0.1">
+                    </article>
                 </section>
 
                 <button id="btn-imagen-reset">Reestablecer filtros</button>

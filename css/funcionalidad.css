@@ -11,9 +11,9 @@
     --font1: 'Yusei Magic', sans-serif;
     --font2: 'Monda', sans-serif;
 }
-.big-aside{
+.disapear{
     display: none;
 }
-.first-section{
-    width: 100%;
+.appear{
+    width: 20%;
 }
