@@ -13,7 +13,7 @@ const asideTextoClose = document.getElementById('aside-texto-close');
 ///////// DECLARACION DE EVENTOS //////////////////
 
 navImagen.addEventListener('click', ()=>{
-    ImageBitmapRenderingContext.a
+    //bigAside.style
     asideImagen.style.display = 'block';
     asideTexto.style.display ='none';
 })
