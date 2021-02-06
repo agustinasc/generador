@@ -39,9 +39,9 @@
         
         <main>
             <section class="main-meme">
-                <article class="top-title">TOP TEXT</article>
-                <article id="meme-img"><img src="" alt=""></article>
-                <article class="bottom-title">BUTTOM TEXT</article>
+                <article id="top-title" class="top-title">TOP TEXT</article>
+                <article id="meme-img"></article>
+                <article id="bottom-title" class="bottom-title">BUTTOM TEXT</article>
             </section>
 
             <button class="btn-download">
@@ -138,6 +138,7 @@
                 <input type="checkbox" name="Boton closed" id="aside-imagen-close">
                 <label for="aside-imagen-close" class="aside-imagen-close"><i class="fas fa-times"></i></label> 
             </section>
+            
             <form>          
                 <h2 class="aside-first-title">TEXTO</h2>
                 <section class="container-title">
@@ -150,7 +151,7 @@
                 </section>
                 <section>
                     <h3 aside-second-title>INFERIOR</h3>
-                    <textarea name="bottom-text" id="bottom-text"  cols="30" rows="20">BUTTOM TEXT</textarea>
+                    <textarea name="bottom-text" id="bottom-text"  cols="30" rows="20">BOTTOM TEXT</textarea>
                 </section>
                 <section>
                     <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
@@ -160,30 +161,30 @@
                 <section>
                     <h3 class="aside-second-title">FUENTE</h3>
 
-                    <select name="text-font" id="text-font">
-                        <option value="Arial">Arial</option>
-                        <option value="Arial Black">Arial Black</option>
+                    <select name="Fuentes del texto" id="text-font">
+                        <option value="arial">Arial</option>
+                        <option value="arial black">Arial Black</option>
                         <option value="American Typewriter">American Typewriter</option>
                         <option value="Andale Mono">Andale Mono</option>
                         <option value="Comic Sans MS">Comic Sans MS</option>
                         <option value="Helvetica">Helvetica</option>
-                        <option value="Impact">Impact</option>
+                        <option value="impact">Impact</option>
                         <option value="Verdana">Verdana</option>
                         <option value="Times New Roman">Times New Roman</option>
                     </select>
 
                 </section>
                 <section class="font-align">
-                    <input type="number" id="text-font-size" name="font-size-text" value="40">
+                    <input type="number" id="text-font-size" name="Tamaño de la fuente" value="40">
                     
                     <section class="btn-container">
-                        <button id="btn">
+                        <button id="btn-left" class="btn">
                             <i class="fas fa-align-left"></i>
                         </button>
-                        <button id="btn">
+                        <button id="btn-center" class="btn">
                             <i class="fas fa-align-center"></i>
                         </button>
-                        <button id="btn">
+                        <button id="btn-right" class="btn">
                             <i class="fas fa-align-right"></i>
                         </button>
                     </section>
@@ -198,8 +199,8 @@
                             <h3 class="aside-second-title">COLOR</h3>
 
                             <article class="input-color">
-                                <input type="color" name="Color del texto" id="fondo-input-colores" value="#FFFFFF">
-                                <span id="span-texto">#FFFFFF</span>
+                                <input type="color" name="Color del texto" id="colores" value="#FFFFFF">
+                                <span class="valor-texto" id="valor-texto">#FFFFFF</span>
                             </article>
                         </section>
 
@@ -207,14 +208,14 @@
                             <h3 class="aside-second-title">FONDO</h3>
                             <article class="input-color">
                                 <input type="color" name="background-text" id="background-text" value="#FFFFFF">
-                                <span id="span-texto">#FFFFFF</span>
+                                <span class="valor-texto" id="valor-fondo">#FFFFFF</span>
                             </article>
                         </section>
 
                     </article>
                     
                     <article name="container check fondo transparente">
-                        <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
+                        <input type="checkbox" name="bottom-text-check" id="transparente">
                         <label for="background-transparent">Fondo transparente</label>
                     </article>
                 </section>

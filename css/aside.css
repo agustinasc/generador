@@ -19,6 +19,7 @@
     background-color: var(--menosOscuroTurque);
     color: whitesmoke;
     padding: 15px;
+
 }
 .aside-first-title{
     display: flex;
@@ -73,7 +74,7 @@ input[type="color"] {
     outline: none;
     border: none;
 }
-#span-texto{
+.valor-texto{
     color: var(--colorText);
     font-family: var(--font2);
     font-size: 13px;
@@ -140,7 +141,7 @@ input[type='range']::-webkit-slider-thumb {
     display: flex;
     justify-content: space-evenly;
 }
-#btn{
+.btn{
     background-color: var(--claroTurque);
     color: var(--colorText);
     width: 25%;
