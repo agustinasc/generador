@@ -40,7 +40,7 @@
         <main>
             <section class="main-meme">
                 <article id="top-title" class="top-title">TOP TEXT</article>
-                <article id="meme-img"></article>
+                <article id="meme-img" class="meme-img"></article>
                 <article id="bottom-title" class="bottom-title">BUTTOM TEXT</article>
             </section>
 
@@ -77,8 +77,8 @@
                 
                 <section class="imagen-fondo">    
                     <section class="input-color"> 
-                        <input type="color" name="fondo de la imagen" id="fondo-input-colores" value="#FFFFFF">
-                        <span id="span-texto">#FFFFFF</span>
+                        <input type="color" name="fondo de la imagen" id="color-background" value="#FFFFFF">
+                        <span class="valor-texto" id="background-texto">#FFFFFF</span>
                     </section>
 
                     <select name="Select de fondos" id="fondo-select">
@@ -115,7 +115,7 @@
                         <input type="range" name="filter-sepia" id="filter-sepia" min="0%" max="100%" value="0%" step="1%">
 
                         <label for="filter-hue-rotation">HUE</label>
-                        <input type="range" name="filter-hue-rotation" id="filter-hue-rotation"  min="0deg" max="359deg" value="1deg" step="0deg">
+                        <input type="range" name="filter-hue-rotation" id="filter-hue"  min="0deg" max="359deg" value="0deg" step="1deg">
 
                         <label for="filter-saturation">SATURADO</label>
                         <input type="range" name="filter-saturation" id="filter-saturation"  min="100%" max="1000%" value="100%" step="10%">
@@ -222,9 +222,9 @@
 
                 <h3 class="aside-second-title">CONTORNO</h3>
                 <section class="container-btn-contorno">
-                    <button class="btn-contorno">Ninguno</button>
-                    <button class="btn-contorno">Claro</button>
-                    <button class="btn-contorno">Oscuro</button>
+                    <button id="btn-ninguno" class="btn-contorno">Ninguno</button>
+                    <button id="btn-claro" class="btn-contorno">Claro</button>
+                    <button id="btn-oscuro" class="btn-contorno">Oscuro</button>
                 </section>
 
                 <h3 class="aside-second-title">ESPACIADO</h3>

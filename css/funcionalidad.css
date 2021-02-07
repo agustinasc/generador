@@ -17,6 +17,18 @@
 .appear{
     width: 20%;
 }
-.meme-img{
-    background-size: cover;
+.aclarar{
+    background-blend-mode: lighten;
+}
+.oscurecer{
+    background-blend-mode: darken;
+}
+.diferencia{
+    background-blend-mode: difference;
+}
+.luminosidad{
+    background-blend-mode: luminosity;
+}
+.multiplicar{
+    background-blend-mode: multiply;
 }
