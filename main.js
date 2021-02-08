@@ -13,6 +13,7 @@ const asideTextoClose = document.getElementById('aside-texto-close');
 
 let urlImagen = document.getElementById('url-imagen');
 let memeImg = document.getElementById('meme-img');
+const mainMeme = document.getElementById('main-meme');
 
 let topText = document.getElementById('top-text');
 let topTitle = document.getElementById('top-title');
@@ -53,7 +54,9 @@ const filterSep = document.getElementById('filter-sepia');
 const filterHue = document.getElementById('filter-hue');
 const filterSat = document.getElementById('filter-saturation');
 const filterNeg = document.getElementById('filter-invert');
+
 const btnImagenReset = document.getElementById('btn-imagen-reset')
+const btnDownload = document.getElementById('btn-download');
 
 /////////  EVENTOS ///////////////
 
@@ -108,49 +111,98 @@ fondoSelect.addEventListener('change', ()=>{
     } else if (fondoSelect.value =='multiplicar'){
         memeImg.classList.add('multiplicar')
     }
-})
+});
 
-filterBri.addEventListener('change', (e)=>{
-   let valueFilter = e.target.value
-    memeImg.style.filter = `brightness(${valueFilter})`;
-})
-filterOpa.addEventListener('change', (e)=>{
-   let valueFilter = e.target.value
-    memeImg.style.filter = `opacity(${valueFilter})`;
-})
-filterCon.addEventListener('change', (e)=>{
-   let valueFilter = e.target.value
-    memeImg.style.filter = `contrast(${valueFilter}%)`;
-})
+// /////////FILTROS ///////
+const filtrosImagen = () =>{
+    memeImg.style.filter = `brightness(${filterBri.value}) opacity(${filterOpa.value}) contrast(${filterCon.value}%) blur(${filterBlu.value}px) grayscale(${filterGra.value}%) sepia(${filterSep.value}%) hue-rotate(${filterHue.value}deg) saturate(${filterSat.value}%) invert(${filterNeg.value})`;
+};
+
+filterBri.addEventListener('change', filtrosImagen);
+filterOpa.addEventListener('change', filtrosImagen);
+filterCon.addEventListener('change', filtrosImagen);
+filterBlu.addEventListener('change', filtrosImagen);
+filterGra.addEventListener('change', filtrosImagen);
+filterSep.addEventListener('change', filtrosImagen);
+filterHue.addEventListener('change', filtrosImagen);
+filterSat.addEventListener('change', filtrosImagen);
+filterNeg.addEventListener('change', filtrosImagen);
+
+btnImagenReset.addEventListener('click', (e)=>{
+    e.preventDefault();
+    filterBri.value = '1';
+    filterOpa.value= '1';
+    filterCon.value= '100';
+    filterBlu.value= '0';
+    filterGra.value = '0';
+    filterSep.value = '0';
+    filterHue.value= '0';
+    filterSat.value = '100';
+    filterNeg.value = '0';
+    filtrosImagen();
+});
+
+
+// filterBri.addEventListener('change', (e)=>{
+//    let valueFilter = e.target.value;
+//     memeImg.style.filter = `brightness(${valueFilter})`;
+// })
+// filterOpa.addEventListener('change', (e)=>{
+//    let valueFilter = e.target.value;
+//     memeImg.style.filter = `opacity(${valueFilter})`;
+// })
+// filterCon.addEventListener('change', (e)=>{
+//     let valueFilter = e.target.value;
+//     memeImg.style.filter = `contrast(${valueFilter}%)`;
+// })
 // filterBlu.addEventListener('change', (e)=>{
-//    let valueFilter = e.target.value
-//    console.log((valueFilter/10))
+//    let valueFilter = (e.target.value);
 //     memeImg.style.filter = `blur(${valueFilter}px)`;
 // })
-filterGra.addEventListener('change', (e)=>{
-   let valueFilter = e.target.value
-    memeImg.style.filter = `grayscale(${valueFilter}%)`;
-})
-filterSep.addEventListener('change', (e)=>{
-   let valueFilter = e.target.value
-    memeImg.style.filter = `sepia(${valueFilter}%)`;
-})
+// filterGra.addEventListener('change', (e)=>{
+//    let valueFilter = e.target.value;
+//     memeImg.style.filter = `grayscale(${valueFilter}%)`;
+// })
+// filterSep.addEventListener('change', (e)=>{
+//    let valueFilter = e.target.value;
+//     memeImg.style.filter = `sepia(${valueFilter}%)`;
+// })
 // filterHue.addEventListener('change', (e)=>{
 //     let valueFilter = e.target.value;
-//     console.log(valueFilter);
-//     memeImg.style.filter = `hue-rotation(${valueFilter}deg)`;
+//     memeImg.style.filter = `hue-rotate(${valueFilter}deg)`;
 // })
 // filterSat.addEventListener('change', (e)=>{
-//     let valueFilter = e.target.value
-//     memeImg.style.filter = `saturation(${valueFilter}%)`;
+//     let valueFilter = e.target.value;
+//     memeImg.style.filter = `saturate(${valueFilter}%)`;
 // })
-filterNeg.addEventListener('change', (e)=>{
-    let valueFilter = e.target.value
-    memeImg.style.filter = `invert(${valueFilter})`;
-})
-btnImagenReset.addEventListener('click', ()=>{
-    
-})
+// filterNeg.addEventListener('change', (e)=>{
+//     let valueFilter = e.target.value;
+//     memeImg.style.filter = `invert(${valueFilter})`;
+// })
+
+// //////////BOTON DE REINICIO ////////
+
+// btnImagenReset.addEventListener('click', (e)=>{
+//     e.preventDefault();
+//     filterBri.value = "1";
+//     memeImg.style.filter = `brightness(1)`;
+//     filterOpa.value = "1";
+//     memeImg.style.filter = `opacity(1)`;
+//     filterCon.value = "100";
+//     memeImg.style.filter = `contrast(100)`;
+//     filterBlu.value = "0";
+//     memeImg.style.filter = `blur(0)`;
+//     filterGra.value = "0";
+//     memeImg.style.filter = `grayscale(0)`;
+//     filterSep.value = "0";
+//     memeImg.style.filter = `sepia(0)`;
+//     filterHue.value = "0";
+//     memeImg.style.filter = `hue-rotate(0)`;
+//     filterSat.value = "100";
+//     memeImg.style.filter = `saturate(100%)`
+//     filterNeg.value = "0";
+//     memeImg.style.filter = `invert(0)`;
+// })
 
 
 
@@ -193,7 +245,6 @@ textFont.addEventListener('change', ()=>{
 })
 
 textFontSize.addEventListener('change', ()=>{
-    //console.log(textFontSize.value)
     topTitle.style.fontSize = `${textFontSize.value}px`;
     bottomTitle.style.fontSize = `${textFontSize.value}px`;
 })
@@ -277,4 +328,14 @@ interlineText.addEventListener('change', (e)=>{
     let interlineValue = e.target.value;
     topTitle.style.lineHeight = `${interlineValue}`;
     bottomTitle.style.lineHeight = `${interlineValue}`;
+})
+
+////////////BOTON DE DESCARGA ///////////
+
+btnDownload.addEventListener('click', ()=>{
+    domtoimage.toBlob(mainMeme)
+        .then(function (blob) {
+            window.saveAs(blob, 'my-node.png');
+        });
+
 })
