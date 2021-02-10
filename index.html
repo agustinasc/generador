@@ -31,8 +31,9 @@
                 <li class="nav-items" id="nav-texto">
                    <i class="fas fa-font"></i>Texto
                 </li>
-                <li class="nav-items">
-                    <i class="far fa-lightbulb"></i>Modo oscuro
+                <li class="nav-items"><i class="far fa-lightbulb"></i>
+                    <input type="checkbox" name="Modo calro" id="btn-mode"  class="check-dark">
+                    <label id="lighter-mode" for="btn-mode">Modo Claro</label>
                 </li>
             </nav>
         </header>
@@ -83,12 +84,12 @@
                     </section>
 
                     <select name="Select de fondos" id="fondo-select">
-                        <option value="ninguno">Ninguno</option>
-                        <option value="aclarar">Aclarar</option>
-                        <option value="oscurecer">Oscurecer</option>
-                        <option value="diferencia">Diferencia</option>
-                        <option value="luminosidad">Luminosidad</option>
-                        <option value="multiplicar">Multiplicar</option>
+                        <option value="none">Ninguno</option>
+                        <option value="lighten">Aclarar</option>
+                        <option value="darken">Oscurecer</option>
+                        <option value="difference">Diferencia</option>
+                        <option value="luminosity">Luminosidad</option>
+                        <option value="multiply">Multiplicar</option>
                     </select>
                 </section>
 
@@ -126,7 +127,7 @@
                     </article>
                 </section>
 
-                <button id="btn-imagen-reset">Reestablecer filtros</button>
+                <button id="btn-imagen-reset">Reestablecer</button>
 
             </section>
         </form>

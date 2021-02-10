@@ -1,5 +1,3 @@
-// SIDEBAR
-
 ///////////// DECLARACION DE VARIABLES /////////
 
 const bigAside = document.getElementById('big-aside');
@@ -58,6 +56,13 @@ const filterNeg = document.getElementById('filter-invert');
 const btnImagenReset = document.getElementById('btn-imagen-reset')
 const btnDownload = document.getElementById('btn-download');
 
+/// MODO CLARO //
+
+const btnMode = document.getElementById('btn-mode');
+const lighterMode = document.getElementById('lighter-mode');
+
+
+
 /////////  EVENTOS ///////////////
 
 /////////////EVENTOS DEL NAV /////////
@@ -100,7 +105,9 @@ colorBackg.addEventListener('input', (e)=>{
 })
 
 fondoSelect.addEventListener('change', ()=>{
-    if (fondoSelect.value == 'aclarar'){
+
+    memeImg.style.backgroundBlendMode = fondoSelect.value;
+    /* if (fondoSelect.value == 'aclarar'){
         memeImg.classList.add('aclarar')
     } else if (fondoSelect.value == 'oscurecer'){
         memeImg.classList.add('oscurecer')
@@ -110,10 +117,12 @@ fondoSelect.addEventListener('change', ()=>{
         memeImg.classList.add('luminosidad')
     } else if (fondoSelect.value =='multiplicar'){
         memeImg.classList.add('multiplicar')
-    }
+    } */
 });
 
-// /////////FILTROS ///////
+
+///////////FILTROS ///////
+
 const filtrosImagen = () =>{
     memeImg.style.filter = `brightness(${filterBri.value}) opacity(${filterOpa.value}) contrast(${filterCon.value}%) blur(${filterBlu.value}px) grayscale(${filterGra.value}%) sepia(${filterSep.value}%) hue-rotate(${filterHue.value}deg) saturate(${filterSat.value}%) invert(${filterNeg.value})`;
 };
@@ -127,6 +136,8 @@ filterSep.addEventListener('change', filtrosImagen);
 filterHue.addEventListener('change', filtrosImagen);
 filterSat.addEventListener('change', filtrosImagen);
 filterNeg.addEventListener('change', filtrosImagen);
+
+///////BOTON DE REINICIO /////
 
 btnImagenReset.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -216,7 +227,6 @@ topText.addEventListener('keyup', ()=>{
 })
 
 topTextCheck.addEventListener('click', ()=>{
-    //console.log(topTextCheck.checked);
     if(topTextCheck.checked == true){
         //console.log('si esta checkeado');
         topTitle.style.display = 'none';
@@ -251,7 +261,6 @@ textFontSize.addEventListener('change', ()=>{
 
 btnLeft.addEventListener('click', (e)=>{
     e.preventDefault();
-    //console.log('left')
     topTitle.style.justifyContent = 'left';
     bottomTitle.style.justifyContent = 'left';
 })
@@ -288,11 +297,18 @@ coloresFondo.addEventListener('input', (e)=>{
 })
 
 transparente.addEventListener('click', (e)=>{
-    //console.log(e.target.checked)
-    if (e.target.checked == true){
-        //HAY QUE AGRANDAR LA FOTO
-    }else if (e.target.checked == false) {
-        //HAY QUE ACHICAR LA FOTO
+    console.log(e.target.checked)
+    if (e.target.checked === true){
+        topTitle.style.display = 'none';
+        bottomTitle.style.backgroundColor = 'transparent';
+        bottomTitle.style.position = 'absolute';
+        bottomTitle.style.bottom = '0';
+    }else if (e.target.checked === false) {
+        topTitle.style.display = 'flex';
+        topTitle.style.backgroundColor = `${coloresFondo.value}`;
+        topTitle.style.position = 'static';
+        bottomTitle.style.backgroundColor = `${coloresFondo.value}`;
+        bottomTitle.style.position = 'static';
     }
 })
 
@@ -339,3 +355,17 @@ btnDownload.addEventListener('click', ()=>{
         });
 
 })
+
+
+///// MODO OSCURO //////
+
+btnMode.addEventListener('click', (e)=>{
+    console.log(e.target.checked);
+    if (e.target.checked===true){
+        lighterMode.innerHTML = "Modo Oscuro";
+        document.body.classList.toggle('lighterMode')
+    }else if (e.target.checked === false){
+        lighterMode.innerHTML = "Modo Claro";
+        document.body.classList.remove('lighterMode');
+    }
+ })

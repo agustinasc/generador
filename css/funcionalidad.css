@@ -1,34 +1,44 @@
 :root{
-    --oscuroTurque: #0F293B;
-    --menosOscuroTurque: #0F293B;
-    --turquesa: #152F4C;
+    --header: #0F293B;
+    --main: #152F4C;
     --claroTurque: #1B4865;
-    --masClaro: #2F4E69;
+    --hoverColor: #2F4E69;
     --celeste: #7293A6;
     --colorText: #f5f5f5;
     --violeta: #a13ecf;
-    --violetaClaro: rgb(171, 104, 202);
+    --hoverColorSecondary: rgb(171, 104, 202);
     --font1: 'Yusei Magic', sans-serif;
     --font2: 'Monda', sans-serif;
 }
+
+/* CLASES PARA APARECER Y DESAPARECER LOS ASIDE  */
+
 .disapear{
     display: none;
 }
 .appear{
     width: 20%;
 }
-.aclarar{
-    background-blend-mode: lighten;
+
+        /* MODO OSCURO */
+
+#lighter-mode{
+    font-family: var(--font1);
+    font-size: 15px;
 }
-.oscurecer{
-    background-blend-mode: darken;
+.check-dark{
+    display: none;
 }
-.diferencia{
-    background-blend-mode: difference;
-}
-.luminosidad{
-    background-blend-mode: luminosity;
-}
-.multiplicar{
-    background-blend-mode: multiply;
+
+.lighterMode{
+    --header: #D2C974;
+    --main: #DBD294;
+    --claroTurque: #DBD294;
+    --hoverColor: #DBD294;
+    --celeste: #FAF9F0;
+    --colorText: #111;
+    --violeta: #EF8089;
+    --hoverColorSecondary: #EF8089;
+    --font1: 'Yusei Magic', sans-serif;
+    --font2: 'Monda', sans-serif;
 }
