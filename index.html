@@ -25,14 +25,14 @@
         <header>
             <h1 class="header-title">Generador de Memes</h1>         
             <nav class="header-nav">
-                <li class="nav-items" id="nav-imagen">
-                    <i class="far fa-image"></i>Imagen
+                <li class="nav-items" id="nav-imagen"> 
+                    <i class="far fa-image" aria-hidden="true"></i>Imagen
                 </li>
                 <li class="nav-items" id="nav-texto">
-                   <i class="fas fa-font"></i>Texto
+                   <i class="fas fa-font" aria-hidden="true"></i>Texto
                 </li>
-                <li class="nav-items"><i class="far fa-lightbulb"></i>
-                    <input type="checkbox" name="Modo calro" id="btn-mode"  class="check-dark">
+                <li class="nav-items"><i class="far fa-lightbulb" aria-hidden="true"></i>
+                    <input type="checkbox" name="Modo calro" id="btn-mode"  class="check-dark"  aria-label="Cambiar a modo claro">
                     <label id="lighter-mode" for="btn-mode">Modo Claro</label>
                 </li>
             </nav>
@@ -41,46 +41,46 @@
         <main>
             <section id="main-meme" class="main-meme">
                 <article id="top-title" class="top-title">TOP TEXT</article>
-                <article id="meme-img" class="meme-img"></article>
+                <article id="meme-img" class="meme-img" aria-label="Imagen de meme"></article>
                 <article id="bottom-title" class="bottom-title">BUTTOM TEXT</article>
             </section>
 
-            <button id="btn-download" class="btn-download">
-                <i class="fas fa-download"></i>Descargar meme
+            <button id="btn-download" class="btn-download" aria-label="Botón para descargar el meme">
+                <i class="fas fa-download"aria-hidden="true"></i>Descargar meme
             </button>
         </main>
 
     </section>
 
-    <section class="big-aside disapear" id="big-aside">
+    <section class="big-aside disapear" id="big-aside" aria-hidden="true">
 
 
     <!--------------------- ASIDE - IMAGEN ---------------->
 
 
-    <aside class="aside-imagen" id="aside-imagen">
+    <aside class="aside-imagen" id="aside-imagen" aria-hidden="true">
         
         <!-- el boton de close es responsivo! -->
         <section class="container-btn-close">
             <input type="checkbox" name="Boton closed" id="aside-imagen-close">
-            <label for="aside-imagen-close" class="aside-imagen-close"><i class="fas fa-times"></i></label> 
+            <label for="aside-imagen-close" class="aside-imagen-close"><i class="fas fa-times" aria-hidden="true"></i></label> 
         </section>
 
         <form>
 
-           <section class="aside-imagen-main">
+           <section class="aside-imagen-main" aria-label="Panel de la Imagen">
 
                 <h2 class="aside-first-title">IMAGEN</h2>
 
                 <h3 class="aside-second-title">URL</h3>
-                <input type="url" id="url-imagen" class="url-imagen">
+                <input type="url" id="url-imagen" class="url-imagen" aria-label="URL de la Imagen">
 
                 <h3 class="aside-second-title">FONDO</h3>
                 
                 <section class="imagen-fondo">    
                     <section class="input-color"> 
-                        <input type="color" name="fondo de la imagen" id="color-background" value="#FFFFFF">
-                        <span class="valor-texto" id="background-texto">#FFFFFF</span>
+                        <input type="color" name="fondo de la imagen" id="color-background" value="#FFFFFF" aria-label="Color de fondo de imagen">
+                        <span class="valor-texto" id="background-texto" aria-hidden="true">#FFFFFF</span>
                     </section>
 
                     <select name="Select de fondos" id="fondo-select">
@@ -127,7 +127,7 @@
                     </article>
                 </section>
 
-                <button id="btn-imagen-reset">Reestablecer</button>
+                <button id="btn-imagen-reset" aria-label="Boton para restablecer los valores">Reestablecer</button>
 
             </section>
         </form>
@@ -138,26 +138,26 @@
 
             <section class="container-btn-close" id="aside-texto-close">
                 <input type="checkbox" name="Boton closed" id="aside-imagen-close">
-                <label for="aside-imagen-close" class="aside-imagen-close"><i class="fas fa-times"></i></label> 
+                <label for="aside-imagen-close" class="aside-imagen-close"><i class="fas fa-times" aria-hidden="true"></i></label> 
             </section>
             
             <form>          
                 <h2 class="aside-first-title">TEXTO</h2>
                 <section class="container-title">
                     <h3 class="aside-second-title">SUPERIOR</h3>
-                    <textarea name="Texto superior" id="top-text" cols="30" rows="15">TOP TEXT</textarea>
+                    <textarea name="Texto superior" id="top-text" cols="30" rows="15" aria-label="texto superior">TOP TEXT</textarea>
                 </section>
                 <section>
-                    <input type="checkbox" name="top-text-check" id="top-text-check">
-                    <label for="top-text-check">Sin texto superior</label>
+                    <input type="checkbox" name="top-text-check" id="top-text-check" aria-label="sin texto superior">
+                    <label for="top-text-check" aria-hidden="true">Sin texto superior</label>
                 </section>
                 <section>
                     <h3 aside-second-title>INFERIOR</h3>
-                    <textarea name="bottom-text" id="bottom-text"  cols="30" rows="20">BOTTOM TEXT</textarea>
+                    <textarea name="bottom-text" id="bottom-text"  cols="30" rows="20" aria-label="texto inferior">BOTTOM TEXT</textarea>
                 </section>
                 <section>
-                    <input type="checkbox" name="bottom-text-check" id="bottom-text-check">
-                    <label for="bottom-text-check">Sin texto inferior</label>
+                    <input type="checkbox" name="bottom-text-check" id="bottom-text-check" aria-label="Sin texto inferior">
+                    <label for="bottom-text-check" aria-hidden="true">Sin texto inferior</label>
                 </section>
 
                 <section>
@@ -177,17 +177,17 @@
 
                 </section>
                 <section class="font-align">
-                    <input type="number" id="text-font-size" name="Tamaño de la fuente" value="40">
+                    <input type="number" id="text-font-size" name="Tamaño de la fuente" value="40" aria-label="Tamaño de la letra">
                     
                     <section class="btn-container">
-                        <button id="btn-left" class="btn">
-                            <i class="fas fa-align-left"></i>
+                        <button id="btn-left" class="btn" aria-label="alinear a la izquierda">
+                            <i class="fas fa-align-left" aria-hidden="true"></i>
                         </button>
-                        <button id="btn-center" class="btn">
-                            <i class="fas fa-align-center"></i>
+                        <button id="btn-center" class="btn" aria-label="alinear al centro">
+                            <i class="fas fa-align-center" aria-hidden="true"></i>
                         </button>
-                        <button id="btn-right" class="btn">
-                            <i class="fas fa-align-right"></i>
+                        <button id="btn-right" class="btn" aria-label="alinear a la derecha">
+                            <i class="fas fa-align-right" aria-hidden="true"></i>
                         </button>
                     </section>
                 </section>
@@ -201,8 +201,8 @@
                             <h3 class="aside-second-title">COLOR</h3>
 
                             <article class="input-color">
-                                <input type="color" name="Color del texto" id="colores" value="#FFFFFF">
-                                <span class="valor-texto" id="valor-texto">#FFFFFF</span>
+                                <input type="color" name="Color del texto" id="colores" value="#FFFFFF" aria-label="Color de la letra">
+                                <span class="valor-texto" id="valor-texto" aria-hidden="true">#FFFFFF</span>
                             </article>
                         </section>
 
@@ -210,30 +210,30 @@
                             <h3 class="aside-second-title">FONDO</h3>
                             <article class="input-color">
                                 <input type="color" name="background-text" id="background-text" value="#FFFFFF">
-                                <span class="valor-texto" id="valor-fondo">#FFFFFF</span>
+                                <span class="valor-texto" id="valor-fondo" aria-hidden="true">#FFFFFF</span>
                             </article>
                         </section>
 
                     </article>
                     
                     <article name="container check fondo transparente">
-                        <input type="checkbox" name="bottom-text-check" id="transparente">
-                        <label for="background-transparent">Fondo transparente</label>
+                        <input type="checkbox" name="bottom-text-check" id="transparente" aria-label="Fondo transparente">
+                        <label for="background-transparent" aria-hidden="true">Fondo transparente</label>
                     </article>
                 </section>
 
                 <h3 class="aside-second-title">CONTORNO</h3>
-                <section class="container-btn-contorno">
-                    <button id="btn-ninguno" class="btn-contorno">Ninguno</button>
-                    <button id="btn-claro" class="btn-contorno">Claro</button>
-                    <button id="btn-oscuro" class="btn-contorno">Oscuro</button>
+                <section class="container-btn-contorno" aria-label="Contorno del texto">
+                    <button id="btn-ninguno" class="btn-contorno" aria-hidden="true">Ninguno</button>
+                    <button id="btn-claro" class="btn-contorno" aria-hidden="true">Claro</button>
+                    <button id="btn-oscuro" class="btn-contorno" aria-hidden="true">Oscuro</button>
                 </section>
 
                 <h3 class="aside-second-title">ESPACIADO</h3>
-                <input type="number" name="Espaciado del texto" id="space-text" value="35">
+                <input type="number" name="Espaciado del texto" id="space-text" value="35" aria-label="Espaciado del texto">
 
                 <h3 class="aside-second-title">INTERLINEADO</h3>
-                <select name="Interlineado del texto" id="interline-text">
+                <select name="Interlineado del texto" id="interline-text" aria-label="Interlineado del texto">
                     <option value="0.8">0.8</option>
                     <option value="1">1</option>
                     <option value="1.2">1.2</option>
