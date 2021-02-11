@@ -113,10 +113,29 @@ main{
 /******************  MEDIA QUERIES ******************** */
 
 @media (max-width: 400px){
+    header{
+        height: 12vh;
+    }
+    main{
+        height: 88vh;
+    }
     .header-title {
-        font-size: 30px;
+        font-size: 20px;
     }
     .nav-items{
-        margin: 5px;
+        padding: 2px;
+        margin: 2px;
     }
+    .main-meme{
+        height: 25em;
+        width: 18em;
+    }
+    .btn-download{
+        margin-top: 4%;
+    }
+    .appear{
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+    } 
 }
