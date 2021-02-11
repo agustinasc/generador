@@ -45,6 +45,8 @@ header{
     display: flex;
     flex-direction: row;
     list-style: none;
+    justify-content: center;
+    width: 90%;
     
 }
 .nav-items{
@@ -114,10 +116,10 @@ main{
 
 @media (max-width: 400px){
     header{
-        height: 12vh;
+        height: 14vh;
     }
     main{
-        height: 88vh;
+        height: 86vh;
     }
     .header-title {
         font-size: 20px;
