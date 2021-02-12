@@ -13,7 +13,7 @@
 
 ### Si te gustaria ver el código, tenes que seguir estos pasos en tu terminal.
 
-- Ir al [repositorio](https://agustinasc.github.io/generador/)
+- Ir al [repositorio](https://github.com/agustinasc/generador)
 - Dar click al botón de forkear
 - Dar click al botón de code
 - Copiar la URL
