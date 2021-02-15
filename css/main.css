@@ -80,7 +80,7 @@ main{
     align-items: center;
     height: 29rem;
     width: 29rem;
-    background-color:#111111;
+    background-color: black;
 }
 .meme-img{
     width: 100%;
@@ -90,13 +90,15 @@ main{
 .top-title, .bottom-title{
     width: 100%;
     min-height: 90px;
-    max-height: 120px;
+    /* max-height: 120px; */
     padding: 2%;
     display: flex;
     justify-content: center;
     align-items: center; 
     background-color: white;
     color: #111;
+    /* position: static; */
+    word-wrap: break-word;
 }
 .btn-download{
     font-family: var(--font2);

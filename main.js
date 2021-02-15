@@ -94,10 +94,10 @@ asideTextoClose.addEventListener('click', ()=>{
 urlImagen.addEventListener('change', (e)=>{
     let src = urlImagen.value;
     console.log(src)
-    memeImg.style.backgroundImage = `url('${src}')`;
-    memeImg.style.backgroundPosition = 'center';
-    memeImg.style.backgroundRepeat = 'no-repeat';
-    //memeImg.style.backgroundSize = 'contain';
+    mainMeme.style.backgroundImage = `url('${src}')`;
+    mainMeme.style.backgroundPosition = 'center';
+    mainMeme.style.backgroundRepeat = 'no-repeat';
+    mainMeme.style.backgroundSize = 'cover';
 })
 colorBackg.addEventListener('input', (e)=>{
     memeImg.style.backgroundColor =  e.target.value;
@@ -299,10 +299,11 @@ coloresFondo.addEventListener('input', (e)=>{
 transparente.addEventListener('click', (e)=>{
     console.log(e.target.checked)
     if (e.target.checked === true){
-        topTitle.style.display = 'none';
+        //topTitle.style.display = 'none';
         bottomTitle.style.backgroundColor = 'transparent';
-        bottomTitle.style.position = 'absolute';
-        bottomTitle.style.bottom = '0';
+        bottomTitle.style.position = 'static';
+        topTitle.style.backgroundColor = 'transparent';
+        //bottomTitle.style.bottom = '0';
     }else if (e.target.checked === false) {
         topTitle.style.display = 'flex';
         topTitle.style.backgroundColor = `${coloresFondo.value}`;

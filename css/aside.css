@@ -10,7 +10,7 @@
     --font1: 'Yusei Magic', sans-serif;
     --font2: 'Monda', sans-serif;
 }
-/* ESTILOS ASIDE */
+/*********************** ESTILOS ASIDE *********************/
 
 .big-aside{
    /*  width: 20%; */
@@ -31,7 +31,7 @@
 
 
 
-/* ESTILOS URL,  FONDO Y BOTON REESTABLECER IMAGEN */
+/*************** ESTILOS URL,  FONDO Y BOTON REESTABLECER IMAGEN ************8*/
 
 .url-imagen, #fondo-select, #btn-imagen-reset, #top-text, #bottom-text, #text-font, #text-font-size, .btn-contorno, #space-text, #interline-text{
     background-color: var(--claroTurque); 
@@ -222,4 +222,9 @@ input[type='range']::-webkit-slider-thumb {
     background-color: var(--hoverColor);
 }
 
-/* MEDIA QUERIES */
+
+
+/* .bottom-title{
+    position: static i !important;
+    background-color: red   ;
+} */

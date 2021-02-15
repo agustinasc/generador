@@ -11,7 +11,7 @@
     --font2: 'Monda', sans-serif;
 }
 
-/* CLASES PARA APARECER Y DESAPARECER LOS ASIDE  */
+/******************* CLASES PARA APARECER Y DESAPARECER LOS ASIDE  */
 
 .disapear{
     display: none;
@@ -21,7 +21,7 @@
     height: 100%;
 }
 
-        /* MODO OSCURO */
+        /************** MODO OSCURO ***********************/
 
 #lighter-mode{
     font-family: var(--font1);
